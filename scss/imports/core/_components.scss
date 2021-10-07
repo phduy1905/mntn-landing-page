@@ -1,0 +1,161 @@
+// css components
+.section {
+  padding: 100px 0;
+
+  @include sm {
+    padding: 60px 0;
+  }
+
+  @include xs {
+    padding: 30px 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    column-gap: 114px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+      place-items: center;
+      row-gap: 40px;
+    }
+  }
+
+  .section__textbox {
+    align-self: center;
+    position: relative;
+    margin-left: 120px;
+
+    @include maxW(1300px) {
+      margin-left: 100px;
+    }
+
+    @include maxW(1200px) {
+      margin-left: 75px;
+      max-width: 600px;
+    }
+
+    @include sm {
+      margin-left: 0;
+    }
+    &-subtitle {
+    }
+
+    &-title {
+      @include text($h2-font-size, $font-title, 76.8px, $text-cl, none);
+      margin-bottom: $mb-2-7;
+
+      @include sm {
+        font-size: 50px;
+        line-height: 40px;
+      }
+
+      @include xs {
+        font-size: 40px;
+        margin-bottom: 12px;
+      }
+
+      @include maxW(380px) {
+        font-size: 24px;
+      }
+    }
+
+    &-description {
+      @include text($normal-font-size, $font-body, 32px, $text-cl, none);
+      font-weight: $font-bold;
+      margin-bottom: $mb-2-7;
+
+      @include xs {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $accent-cl;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+      img {
+        margin-left: 16px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      color: $text-cl;
+      opacity: 0.2;
+      top: -25%;
+      left: -20%;
+      font-size: 200px;
+      line-height: 240px;
+      font-family: "Gilroy Bold";
+
+      @include xs {
+        left: 0%;
+      }
+
+      @include maxW(380px) {
+        font-size: 100px;
+      }
+    }
+  }
+
+  .section__img-overlay {
+    overflow: hidden;
+    position: relative;
+    @include sm {
+      height: 450px;
+      width: 300px;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.textbox-subtitle {
+  display: flex;
+  column-gap: 32px;
+  align-items: center;
+  margin-bottom: $mb-2-7;
+
+  @include xs {
+    column-gap: 10px;
+    margin-bottom: 10px;
+  }
+  span {
+    height: 2px;
+    width: 72px;
+    background-color: $accent-cl;
+    display: block;
+
+    @include xxs {
+      width: 52px;
+    }
+  }
+
+  p {
+    @include text($normal-font-size, $font-body, 22px, $accent-cl, uppercase);
+    font-weight: $font-extra-bold;
+    letter-spacing: 6px;
+
+    @include xxs {
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
+  }
+}

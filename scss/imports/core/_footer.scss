@@ -1,0 +1,99 @@
+// css footer
+.footer {
+  padding: 100px 0;
+  @include sm {
+    padding: 50px 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    column-gap: 114px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-top {
+    }
+
+    &-title {
+      display: block;
+      @include text($logo-font-size, $font-title, 34.8px, $text-cl, uppercase);
+      letter-spacing: 1%;
+      margin-bottom: $mb-2-7;
+    }
+
+    &-description {
+      font-weight: $font-bold;
+      line-height: 32px;
+    }
+
+    &-bottom {
+      font-weight: $font-medium;
+      opacity: 0.5;
+      line-height: 32px;
+
+      @include xs {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include sm {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    &-title {
+      @include text(
+        $footer-heading-font-size,
+        $font-body,
+        32px,
+        $accent-cl,
+        none
+      );
+      font-weight: $font-semi-bold;
+      margin-bottom: $mb-2-4;
+
+      @include xs {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      li {
+        &:not(:last-child) {
+          margin-bottom: $mb-1-6;
+        }
+      }
+
+      a {
+        color: $text-cl;
+        font-weight: $font-medium;
+        line-height: 32px;
+
+        @include xxs {
+          font-size: 14px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

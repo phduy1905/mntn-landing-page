@@ -1,0 +1,91 @@
+// css header
+.header {
+  height: $header-height;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+  &__logo {
+    @include text($logo-font-size, $font-title, 38px, $text-cl, uppercase);
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @include text($normal-font-size, $font-body, 21px, $text-cl, normal);
+    font-weight: $font-bold;
+    @include transition($t);
+    position: relative;
+
+    &:hover {
+      color: $accent-cl;
+    }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+
+    &-icon {
+    }
+
+    &-text {
+      @include text(
+        $normal-font-size,
+        $font-body-bold,
+        21px,
+        $text-cl,
+        capitalize
+      );
+      font-weight: $font-bold;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    &-icon {
+      color: $text-cl;
+      font-size: $logo-font-size;
+    }
+  }
+
+  &.active {
+    height: 80px;
+    background-color: $body-cl;
+  }
+
+  @include sm {
+    height: 100px;
+
+    &__menu,
+    &__account {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+}

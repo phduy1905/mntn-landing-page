@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MNTN</title>
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+
+  <!-- FONTS -->
+  <link rel="stylesheet" href="dest/fonts.css" />
+
+  <!-- REMIX ICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="dest/stylelibs.min.css" />
+  <link rel="stylesheet" href="dest/style.min.css" />
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container-fluid">
+      <a href="#" class="header__logo">MNTN</a>
+      <ul class="header__menu">
+        <li class="header__item">
+          <a href="#" class="header__link">Equipment</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">About us</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Blog</a>
+        </li>
+      </ul>
+      <div class="header__account">
+        <img src="img/account.png" class="header__account-icon" alt="" />
+        <p class="header__account-text">Account</p>
+      </div>
+      <div class="header__toggle">
+        <i class="ri-menu-3-fill header__toggle-icon"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV MENU -->
+  <nav class="nav" id="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Equipment</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">About us</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+      <li class="nav__item">
+        <a href="#" class="nav__link nav__account">
+          <img src="img/account.png" class="nav__account-icon" alt="" />
+          <p class="nav__account-text">Account</p>
+        </a>
+      </li>
+    </ul>
+    <div class="nav__close">
+      <i class="ri-close-fill nav__close-icon"></i>
+    </div>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- MAIN -->
+  <main class="main" id="main">
+    <!-- HOME -->
+    <section class="home" id="home">
+      <img src="img/hero-img.jpg" alt="" class="home__img" />
+      <div class="container-fluid">
+        <div class="home__container">
+          <div class="home__social">
+            <p class="home__social-text">Follow us</p>
+            <a href="https://instagram" target="_blank" class="home__social-link">
+              <img src="img/instagram.svg" alt="" /></a>
+            <a href="https://instagram" target="_blank" class="home__social-link">
+              <img src="img/twitter.svg" alt="" /></a>
+          </div>
+          <div class="home__textbox">
+            <div class="home__textbox-subtitle textbox-subtitle">
+              <span></span>
+              <p>A hiking guide</p>
+            </div>
+            <h1 class="home__textbox-title">
+              Be prepared for the <br />mountains and beyond!
+            </h1>
+            <div class="home__textbox-scrolldown">
+              <p>scroll down</p>
+              <div>
+                <img src="img/arrow-down.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="home__navigation">
+            <div class="home__navigation-text">
+              <a href="#home" class="active"><span>Start</span></a>
+              <a href="#section1"><span>01</span></a>
+              <a href="#section2"><span>02</span></a>
+              <a href="#section3"><span>03</span></a>
+            </div>
+            <div class="home__navigation-line">
+              <div class="current"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1 -->
+    <section class="section-1 section" id="section1">
+      <div class="container">
+        <div class="section__textbox">
+          <div class="section__textbox-subtitle textbox-subtitle">
+            <span></span>
+            <p>get started</p>
+          </div>
+          <h2 class="section__textbox-title">What level of hiker are you?</h2>
+          <p class="section__textbox-description">
+            Determining what level of hiker you are can be an important tool
+            when planning future hikes. This hiking level guide will help you
+            plan hikes according to different hike ratings set by various
+            websites like All Trails and Modern Hiker. What type of hiker are
+            you – novice, moderate, advanced moderate, expert, or expert
+            backpacker?
+          </p>
+          <a href="#" class="section__textbox-link">read more
+            <img src="img/arrow-right.svg" alt="" />
+          </a>
+        </div>
+        <div class="section__img-overlay">
+          <img src="img/section-01.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section-2 section" id="section2">
+      <div class="container">
+        <div class="section__textbox">
+          <div class="section__textbox-subtitle textbox-subtitle">
+            <span></span>
+            <p>hiking essentials</p>
+          </div>
+          <h2 class="section__textbox-title">
+            Picking the right Hiking Gear!
+          </h2>
+          <p class="section__textbox-description">
+            The nice thing about beginning hiking is that you don’t really
+            need any special gear, you can probably get away with things you
+            already have. Let’s start with clothing. A typical mistake hiking
+            beginners make is wearing jeans and regular clothes, which will
+            get heavy and chafe wif they get sweaty or wet.
+          </p>
+          <a href="#" class="section__textbox-link">read more
+            <img src="img/arrow-right.svg" alt="" />
+          </a>
+        </div>
+        <div class="section__img-overlay">
+          <img src="img/section-02.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section-3 section" id="section3">
+      <div class="container">
+        <div class="section__textbox">
+          <div class="section__textbox-subtitle textbox-subtitle">
+            <span></span>
+            <p>where you go is the key</p>
+          </div>
+          <h2 class="section__textbox-title">Understand Your Map & Timing</h2>
+          <p class="section__textbox-description">
+            To start, print out the hiking guide and map. If it’s raining,
+            throw them in a Zip-Lock bag. Read over the guide, study the map,
+            and have a good idea of what to expect. I like to know what my
+            next landmark is as I hike. For example, I’ll read the guide and
+            know that say, in a mile, I make a right turn at the junction..
+          </p>
+          <a href="#" class="section__textbox-link">read more
+            <img src="img/arrow-right.svg" alt="" />
+          </a>
+        </div>
+        <div class="section__img-overlay">
+          <img src="img/section-03.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__textbox">
+        <div class="footer__textbox-top">
+          <a href="#" class="footer__textbox-title">MNTN</a>
+          <div class="footer__textbox-description">
+            Get out there & discover your next <br />
+            slope, mountain & destination!
+          </div>
+        </div>
+        <div class="footer__textbox-bottom">
+          Copyright 2019 MNTN, Inc. Terms & Privacy
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__list">
+          <h3 class="footer__list-title">More on The Blog</h3>
+          <ul class="footer__list-items">
+            <li><a href="#">About MNTN</a></li>
+            <li><a href="#">Contributors & Writers</a></li>
+            <li><a href="#">Write for us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <h3 class="footer__list-title">More on MNTN</h3>
+          <ul class="footer__list-items">
+            <li><a href="#">The team</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- SCROLL UP -->
+  <!-- SCROLL REVEAL -->
+  <script src="dest/jsmain.min.js"></script>
+  <script src="dest/main.js"></script>
+</body>
+
+</html>

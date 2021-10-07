@@ -1,0 +1,69 @@
+// Colors
+$text-cl: #ffffff;
+$accent-cl: #fbd784;
+$body-cl: #0c1d27;
+
+// timing transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/*font families*/
+$font-title: "Chronicle Display Roman";
+$font-body: "Gilroy";
+$font-body-bold: "Gilroy Bold";
+
+/*headings typo*/
+$h1-font-size: 88px;
+$h2-font-size: 64px;
+$logo-font-size: 32px;
+$footer-heading-font-size: 24px;
+$normal-font-size: 18px;
+$small-font-size: 17px;
+
+@media screen and (max-width: 767px) {
+  $h1-font-size: 55px;
+  $h2-font-size: 40px;
+  $logo-font-size: 28px;
+  $footer-heading-font-size: 22px;
+  $normal-font-size: 14px;
+  $small-font-size: 12px;
+}
+
+/*Font weight*/
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+/*Margin bottom*/
+$mb-3-2: 32px;
+$mb-2-7: 27px;
+$mb-2-4: 24px;
+$mb-1-6: 16px;
+
+/*Hover overlay*/
+$img-transition: 0.3s;
+$img-hidden: hidden;
+$img-scale: scale(1.1);
+
+/*Header height*/
+$header-height: 154px;
+
+//============================================================//
+
+/*BOXED LAYOUT*/
+$container-max-width: 1920px;
+$container-width: 1499px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
+$xs-min: 768px; // KHÔNG THAY ĐỔI
+$sm-min: 992px; // KHÔNG THAY ĐỔI
+$md-min: 1200px; // KHÔNG THAY ĐỔI
+$lg-min: 1600px; // CÓ THỂ TÙY CHỈNH
+
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop

@@ -1,0 +1,58 @@
+// css button, title, icon, elements...
+body {
+  &.overlay-open {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  border: none;
+  font-family: $font-body;
+  font-size: $normal-font-size;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  &-text {
+    @include text($normal-font-size, $font-body, 22px, $accent-cl, normal);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 110;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+  &.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}

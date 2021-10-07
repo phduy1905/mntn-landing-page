@@ -1,0 +1,115 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: rgb(238, 77, 45);
+  --border-color: #dbdbdb;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  animation: fadeIn ease-in 0.3s;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal__body {
+  background-color: var(--white-color);
+  margin: auto;
+  z-index: 2;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* BUTTONS */
+.btn {
+  height: 36px;
+  min-width: 142px;
+  border: none;
+  background-color: var(--white-color);
+  font-size: 1.4rem;
+  padding: 0 12px;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+.btn.btn--normal:hover {
+  background-color: #eee;
+}
+
+.btn.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn.btn--disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 12px;
+  padding: 0 4px;
+  padding-left: 8px;
+}
+
+.auth-form__socials-label {
+  margin: 0 36px;
+}

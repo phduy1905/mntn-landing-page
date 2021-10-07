@@ -1,0 +1,255 @@
+// CSS HOMEPAGE
+.home {
+  position: relative;
+
+  .container-fluid {
+    position: absolute;
+    top: 287px;
+
+    @include maxW(1200px) {
+      top: 237px;
+    }
+
+    @include sm {
+      top: 150px;
+    }
+
+    @include xs {
+      top: 120px;
+    }
+
+    @include maxW(380px) {
+      top: 100px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include sm {
+      display: grid;
+      grid-template-columns: 1fr min-content;
+      column-gap: 40px;
+      row-gap: 50px;
+    }
+
+    @include xs {
+      row-gap: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    align-items: flex-start;
+    column-gap: 26px;
+
+    @include sm {
+      grid-row: 2;
+      writing-mode: horizontal-tb;
+    }
+    &-text {
+      @include text($normal-font-size, $font-body, 21.76px, $text-cl, none);
+
+      @include maxW(380px) {
+        font-size: 14px;
+      }
+    }
+
+    &-link {
+      height: 20px;
+      width: 20px;
+
+      @include maxW(380px) {
+        height: 14px;
+        width: 14px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__textbox {
+    &-subtitle {
+      p {
+        @include maxW(380px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-title {
+      @include text($h1-font-size, $font-title, 114%, $text-cl, capitalize);
+      margin-bottom: $mb-2-7;
+
+      @include maxW(1300px) {
+        font-size: 70px;
+      }
+
+      @include sm {
+        font-size: 55px;
+        margin-bottom: $mb-1-6;
+      }
+
+      @include xs {
+        font-size: 40px;
+      }
+
+      @include maxW(380px) {
+        font-size: 28px;
+      }
+    }
+
+    &-scrolldown {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      p {
+        @include text($normal-font-size, $font-body, normal, $text-cl, none);
+        font-weight: $font-bold;
+      }
+
+      div {
+        animation: scrolldown 1s ease infinite forwards;
+      }
+
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    column-gap: 32px;
+
+    @include xs {
+      column-gap: 10px;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: right;
+
+      a {
+        color: $text-cl;
+
+        &.active {
+          font-family: $font-body-bold;
+        }
+      }
+
+      span {
+        font-weight: $font-bold;
+
+        @include maxW(380px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-line {
+      height: 240px;
+      width: 3px;
+      background-color: rgba($text-cl, 0.5);
+
+      @include xs {
+        height: 200px;
+      }
+
+      @include maxW(380px) {
+        height: 150px;
+      }
+
+      position: relative;
+      .current {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25%;
+        width: 3px;
+        background-color: $text-cl;
+        opacity: 1;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+.section-1 {
+  margin-top: -500px;
+
+  @include maxW(1300px) {
+    margin-top: -400px;
+  }
+
+  @include maxW(1200px) {
+    margin-top: -300px;
+  }
+
+  @include sm {
+    margin-top: -150px;
+  }
+
+  @include xs {
+    margin-top: -100px;
+  }
+
+  @include xxs {
+    margin-top: -50px;
+  }
+
+  @include maxH(480px) {
+    margin-top: 0;
+  }
+
+  .section__textbox::before {
+    content: "01";
+  }
+}
+
+.section-2 {
+  .container {
+    grid-template-columns: 0.8fr 1fr;
+    column-gap: 114px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  .section__textbox {
+    order: 2;
+
+    @include sm {
+      order: 1;
+    }
+  }
+
+  .section__img-overlay {
+    order: 1;
+
+    @include sm {
+      order: 2;
+    }
+  }
+  .section__textbox::before {
+    content: "02";
+  }
+}
+
+.section-3 {
+  .section__textbox::before {
+    content: "03";
+  }
+}
